@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   const devName = " Prerna Purohit";
-  const apiSrc = " OMDB API"
+  const apiSrc = " OMDb API"
   return (
     <div>
       <div className="row">
