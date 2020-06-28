@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Navbar() {
+export const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-dark bg-dark mb-5">
         <div className="container">
           <div className="navbar-header">
-            {/* <Link className="navbar-brand text-white text-lg brand-text" to="/"> */}
-              Browse movies
-            {/* </Link> */}
+            <Link className="navbar-brand text-white text-lg brand-text" to="/">
+              Browse Movies
+            </Link>
           </div>
           <ul className="navbar-nav ml-auto text-light d-inline-block">
             <li className="nav-item d-inline-block mr-4">
