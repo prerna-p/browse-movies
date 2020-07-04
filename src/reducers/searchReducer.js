@@ -14,12 +14,18 @@ export default function (state = initialState, action) {
         ...state,
         text: action.payload,
         loading: false,
-      }
+      };
     case FETCH_MOVIES:
       return {
         ...state,
         movies: action.payload,
-      }
+        loading: false,
+      };
+    case FETCH_MOVIE:
+      return {
+        ...state,
+        movie: action.payload,
+      };
     default:
       return state
   }
