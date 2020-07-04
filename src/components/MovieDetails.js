@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import Spinner from './Spinner'
 import { connect } from 'react-redux'
-import { fetchMovie } from '../actions/searchActions'
+import { fetchMovie, setLoading } from '../actions/searchActions'
+import { Link } from 'react-router-dom'
 
 export class MovieDetails extends Component {
   componentDidMount() {
-    this.props.fetchMovie(this.props.match.params.id)
+    this.props.fetchMovie(this.props.match.params.id);
+    this.props.setLoading();
   }
 
   render() {
+    const { movie, loading } = this.props;
     let movieInfo = (
       <div className="container">
         <div className="row">
@@ -74,4 +77,4 @@ const mapStateToProps = state => ({
   movie: state.movies.movie,
 })
 
-export default connect(mapStateToProps, { fetchMovie })(MovieDetails);
+export default connect(mapStateToProps, { fetchMovie, setLoading })(MovieDetails);
