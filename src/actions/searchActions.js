@@ -5,7 +5,7 @@ import {
   LOADING
 } from './types';
 import axios from 'axios';
-import { APIKey } from '../APIKey'
+
 const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 const URL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
