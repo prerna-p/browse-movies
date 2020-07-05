@@ -7,7 +7,7 @@ import {
 import axios from 'axios';
 import { APIKey } from '../APIKey'
 const API_KEY = `${process.env.REACT_APP_API_KEY}`;
-const URL = `http://www.omdbapi.com/?apikey=${APIKey}`;
+const URL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
 export const searchMovie = text => dispatch => {
   dispatch({
